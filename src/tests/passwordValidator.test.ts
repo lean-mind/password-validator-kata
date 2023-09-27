@@ -16,4 +16,8 @@ describe('The password validator', () => {
 	it('considers a password to be invalid when it does not contain upper case', () => {
 		expect(isValidPassword('s3cret_source')).toBe(false);
 	});
+
+	it('considers a password to be invalid when it does not contain lower case', () => {
+		expect(isValidPassword('TDD_3N_ACCION')).toBe(false);
+	});
 });
