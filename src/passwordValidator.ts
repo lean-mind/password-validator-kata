@@ -3,5 +3,8 @@ export function isValidPassword(password: string) {
 	if (containsLessThanEightCharacters) {
 		return false;
 	}
+	if (!password.match(/\d/)) {
+		return false;
+	}
 	return true;
 }
