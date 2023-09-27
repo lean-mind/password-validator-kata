@@ -1,3 +1,5 @@
+import { isValidPassword } from "../passwordValidator";
+
 
 describe('The password validator', () => {
 	it('considers a password to be valid when it meets all requirements', () => {
