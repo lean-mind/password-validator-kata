@@ -7,5 +7,9 @@ export function isValidPassword(password: string) {
 	if (notContainsNumbers) {
 		return false;
 	}
+	const notContainsUpperCase = !password.match(/[A-Z]/);
+	if (notContainsUpperCase) {
+		return false;
+	}
 	return true;
 }
