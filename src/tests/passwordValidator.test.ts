@@ -12,4 +12,8 @@ describe('The password validator', () => {
 	it('considers a password to be invalid when it does not contain numbers', () => {
 		expect(isValidPassword('Lean_Mind')).toBe(false);
 	});
+
+	it('considers a password to be invalid when it does not contain upper case', () => {
+		expect(isValidPassword('s3cret_source')).toBe(false);
+	});
 });
