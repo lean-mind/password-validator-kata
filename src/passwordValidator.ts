@@ -15,5 +15,9 @@ export function isValidPassword(password: string) {
 	if (notContainsLowerCase) {
 		return false;
 	}
+	const notContainsUnderscore = !password.match(/_/);
+	if (notContainsUnderscore) {
+		return false;
+	}
 	return true;
 }
