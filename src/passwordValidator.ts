@@ -1,5 +1,6 @@
 export function isValidPassword(password: string) {
-	if (password.length < 8) {
+	const containsLessThanEightCharacters = password.length < 8;
+	if (containsLessThanEightCharacters) {
 		return false;
 	}
 	return true;
