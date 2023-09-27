@@ -8,4 +8,8 @@ describe('The password validator', () => {
 	it('considers a password to be invalid when it has less than 8 characters', () => {
 		expect(isValidPassword('Sp3gc_')).toBe(false);
 	});
+
+	it('considers a password to be invalid when it does not contain numbers', () => {
+		expect(isValidPassword('Lean_Mind')).toBe(false);
+	});
 });
