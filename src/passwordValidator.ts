@@ -1,9 +1,29 @@
 export function isValidPassword(password: string) {
-	const isLengthValid = password.length >= 8;
-	const containsNumbers = /\d/.test(password);
-	const containsUpperCase = /[A-Z]/.test(password);
-	const containsLowerCase = /[a-z]/.test(password);
-	const containsUnderscore = /_/.test(password);
+	return (
+		isLengthValid(password) &&
+		containsNumbers(password) &&
+		containsUpperCase(password) &&
+		containsLowerCase(password) &&
+		containsUnderscore(password)
+	);
+}
 
-	return isLengthValid && containsNumbers && containsUpperCase && containsLowerCase && containsUnderscore;
+function isLengthValid(password: string) {
+	return password.length >= 8;
+}
+
+function containsNumbers(password: string) {
+	return /\d/.test(password);
+}
+
+function containsUpperCase(password: string) {
+	return /[A-Z]/.test(password);
+}
+
+function containsLowerCase(password: string) {
+	return /[a-z]/.test(password);
+}
+
+function containsUnderscore(password: string) {
+	return /_/.test(password);
 }
