@@ -3,7 +3,8 @@ export function isValidPassword(password: string) {
 	if (containsLessThanEightCharacters) {
 		return false;
 	}
-	if (!password.match(/\d/)) {
+	const notContainsNumbers = !password.match(/\d/);
+	if (notContainsNumbers) {
 		return false;
 	}
 	return true;
